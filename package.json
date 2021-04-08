@@ -1,0 +1,12 @@
+{
+  "name": "alg_exp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "run": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

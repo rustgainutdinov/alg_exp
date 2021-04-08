@@ -1,15 +1,15 @@
 let express = require('express');
 let bodyParser = require('body-parser');
-let app = express();
+let index = express();
 
-app.use(bodyParser.text());
+index.use(bodyParser.text());
 
-app.post('/api/v1/expression', function (req, res) {
+index.post('/api/v1/expression', function (req, res) {
 	const applyMath = getMathHandler();
 	res.send(applyMath(req.body));
 });
 
-app.listen(process.env.PORT || 5000);
+index.listen(process.env.PORT || 5000);
 
 function getMathHandler() {
 	const math = getMathFn();

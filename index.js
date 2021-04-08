@@ -4,9 +4,12 @@ let index = express();
 
 index.use(bodyParser.text());
 
-index.post('/api/v1/expression', function (req, res) {
+index.post('/api/v1/arithmetic', function (req, res) {
 	const applyMath = getMathHandler();
 	res.send(applyMath(req.body));
+});
+index.head('/api/v1/health', function (req, res) {
+	res.sendStatus(200);
 });
 
 index.listen(process.env.PORT || 5000);

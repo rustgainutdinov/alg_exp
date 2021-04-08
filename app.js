@@ -9,7 +9,7 @@ app.post('/api/v1/expression', function (req, res) {
 	res.send(applyMath(req.body));
 });
 
-app.listen(8000);
+app.listen(80);
 
 function getMathHandler() {
 	const math = getMathFn();
